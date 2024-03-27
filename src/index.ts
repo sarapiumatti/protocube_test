@@ -116,11 +116,7 @@ let init = () => {
   
   meshMaterial.needsUpdate = true;
   polyhedron = new Mesh(polyhedronGeometry, meshMaterial); 
-  //
-  //scene.add(polyhedron);
-
-  
-
+  scene.add(polyhedron);
 
   //LIGHTS
   lights[ 0 ] = new DirectionalLight( 0xffffff, 3 );
@@ -144,9 +140,9 @@ let init = () => {
   UI();
   
 
-  
+  //Delete comments below for task 7
   //TASK 7
-  const material = new RawShaderMaterial( {
+  /*const material = new RawShaderMaterial( {
       uniforms: {
         time: { value: 1.0 },
         center: { value: new Vector3(0, 0, 0) }, 
@@ -158,10 +154,11 @@ let init = () => {
   } );
 
   polyhedron = new Mesh(polyhedronGeometry, material); 
-  scene.add(polyhedron);
+  scene.add(polyhedron);*/
 
   document.body.appendChild(renderer.domElement) //add renderer to HTML
-};
+}
+
 
 
 function CreatePolyhedron(detail): PolyhedronGeometry {
@@ -182,7 +179,6 @@ const indices = [
   const radius = 6;
   let polyGeometry = new PolyhedronGeometry(vertexPositions, indices, radius, detail);
   polyGeometry.computeVertexNormals ()
-  //geo.computeTangents ()
   return polyGeometry;
 }
 
@@ -190,7 +186,7 @@ const indices = [
 let UI = () =>{
   const PARAMS = {
     "Light Color": lights[ 0 ].color.getHex(),
-    "Background Color": 0x404040,
+    "Background Color": backgroundColor,
     "Material Color":  meshMaterial.color.getHex(),
     "Environment Map": true,
     "Subdivision": 0,
@@ -262,9 +258,9 @@ let UI = () =>{
 }
 
 function rotate(speed) {
+  //TASK 5
   clock = new Clock();
   targetX = mouseX * .001
-  //targetY = mouseY * .001
 
   const elapsedTime = clock.getElapsedTime()
 
