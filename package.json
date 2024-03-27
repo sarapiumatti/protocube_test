@@ -1,0 +1,42 @@
+{
+  "name": "realtime-cg-test",
+  "version": "1.0.0",
+  "description": "A starter for the Realtime CG Test",
+  "main": "index.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "cross-env ENV=START webpack --config webpack.config.demo.js",
+    "start": "cross-env webpack serve --config webpack.config.dev.js",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@tweakpane/core": "^2.0.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "cross-env": "^7.0.3",
+    "glsl-shader-loader": "^0.1.6",
+    "html-webpack-plugin": "^5.5.3",
+    "portfinder-sync": "^0.0.2",
+    "prettier": "^3.0.3",
+    "terser-webpack-plugin": "^5.3.9",
+    "ts-loader": "^9.5.0",
+    "typescript": "^5.2.2",
+    "webpack": "^5.33.2",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^4.15.1",
+    "webpack-merge": "^5.7.3"
+  },
+  "dependencies": {
+    "eventemitter3": "^4.0.7",
+    "glsl-man": "^1.1.14",
+    "light-generator": "^1.11.2",
+    "lil-gui": "^0.19.2",
+    "stats.js": "^0.17.0",
+    "three": "^0.158.0",
+    "tweakpane": "^4.0.3"
+  }
+}

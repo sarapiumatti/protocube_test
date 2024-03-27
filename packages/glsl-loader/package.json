@@ -1,0 +1,14 @@
+{
+  "name": "@polymole/glsl-loader",
+  "version": "1.0.0",
+  "description": "Webpack GLSL Loader with custom include preprocessor directives",
+  "main": "poly-glsl-loader.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.1.3"
+  }
+}
